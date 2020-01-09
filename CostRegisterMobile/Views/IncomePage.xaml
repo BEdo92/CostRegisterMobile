@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="CostRegisterMobile.Views.IncomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CostRegisterMobile.Views"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Bevétel rögzítése"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+
+                    <Label x:Name="newIncomeType" Text="Bevétel címe" />
+
+                    <Entry
+                        x:Name="newIncomeTypeInput"
+                        MaxLength="100"
+                        Text="{Binding TitleOfIncome}" />
+
+                    <Label x:Name="dateOfShopping" Text="Beérkezés dátuma:" />
+
+                    <DatePicker Date="{Binding Date}" />
+
+                    <Label x:Name="income" Text="Összeg (Ft):" />
+
+                    <Entry
+                        x:Name="IncomeInput"
+                        Keyboard="Numeric"
+                        Text="{Binding ActualIncome}" />
+
+                    <Label x:Name="additionalInfo" Text="Megjegyzés:" />
+
+                    <Entry
+                        x:Name="additionalInfoInput"
+                        MaxLength="100"
+                        Text="{Binding AdditionalInformations}" />
+
+                    <Button
+                        x:Name="saveIncome"
+                        Command="{Binding SaveCommand}"
+                        Text="Mentés" />
+
+                    <Button
+                        x:Name="deleteForm"
+                        Command="{Binding DeleteCommand}"
+                        Text="Űrlap törlése" />
+
+                    <Label x:Name="balanceLabel" Text="{Binding Balance}" />
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <Grid
+                BackgroundColor="Black"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.7">
+                <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="Center"
+                    Color="Pink" />
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</controls:CustomContentPage>

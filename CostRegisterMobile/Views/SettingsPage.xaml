@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="CostRegisterMobile.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CostRegisterMobile.Views"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Beállítások"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+
+                    <Label x:Name="newCategory" Text="Új kategória hozzáadása: " />
+
+                    <Entry
+                        x:Name="newCategoryInput"
+                        MaxLength="100"
+                        Text="{Binding NewCategory}" />
+
+                    <Picker
+                        x:Name="pickDeleteCategoryPick"
+                        Title="Kategória törlése"
+                        ItemsSource="{Binding Categories}"
+                        SelectedItem="{Binding SelectedCategory}" />
+
+                    <Label x:Name="newShop" Text="Új üzlet hozzáadása:" />
+
+                    <Entry
+                        x:Name="newShopInput"
+                        MaxLength="100"
+                        Text="{Binding NameOfNewShop}" />
+
+                    <!--  SETTING - PLANS SHOULD BE INVOLVED  -->
+
+                    <Label x:Name="involvePlans" Text="Egyenleg megjelenítése az előtervezett levonásával" />
+
+                    <Switch IsToggled="{Binding InvolvePlans}" />
+
+                    <!--  BUTTONS  -->
+                    <Button
+                        x:Name="deleteForm"
+                        Command="{Binding DeleteCommand}"
+                        Text="Űrlap törlése" />
+
+                    <Button
+                        x:Name="saveSettings"
+                        Command="{Binding SaveCommand}"
+                        Text="Mentés" />
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <Grid
+                BackgroundColor="Black"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.7">
+                <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="Center"
+                    Color="Pink" />
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</controls:CustomContentPage>

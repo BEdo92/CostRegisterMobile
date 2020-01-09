@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="CostRegisterMobile.Views.CostsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CostRegisterMobile.Views"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Költség rögzítése"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+
+            <ScrollView>
+                <StackLayout>
+
+                    <Label x:Name="dateOfShopping" Text="Kiadás időpontja:" />
+
+                    <DatePicker x:Name="DatePick" Date="{Binding Date}" />
+
+                    <Picker
+                        x:Name="costCategoryPick"
+                        Title="Kiadás kategóriája"
+                        ItemsSource="{Binding Categories}"
+                        SelectedItem="{Binding SelectedCategory}" />
+
+                    <Picker
+                        x:Name="shopPick"
+                        Title="Kiadás helye/üzlet:"
+                        ItemsSource="{Binding Shops}"
+                        SelectedItem="{Binding SelectedShop}" />
+
+                    <Label x:Name="cost" Text="Összeg (Ft):" />
+
+                    <Entry
+                        x:Name="costInput"
+                        Keyboard="Numeric"
+                        Text="{Binding ActualCost}" />
+
+                    <Label x:Name="additionalInfo" Text="Megjegyzés:" />
+
+                    <Entry
+                        x:Name="additionalInfoInput"
+                        MaxLength="100"
+                        Text="{Binding AdditionalInformations}" />
+
+                    <Button
+                        x:Name="saveCost"
+                        Command="{Binding SaveCommand}"
+                        Text="Mentés" />
+
+                    <Button
+                        x:Name="deleteForm"
+                        Command="{Binding DeleteCommand}"
+                        Text="Űrlap törlése" />
+
+                    <Label x:Name="balanceLabel" Text="{Binding Balance}" />
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <Grid
+                BackgroundColor="Black"
+                IsVisible="{Binding IsBusy}"
+                Opacity="0.7">
+                <ActivityIndicator
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="Center"
+                    Color="Pink" />
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</controls:CustomContentPage>

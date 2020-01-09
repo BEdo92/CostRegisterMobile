@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="CostRegisterMobile.Views.CostPerCategoryStatisticsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CostRegisterMobile.Views"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Kiadások kategóriánként"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="StatsPerCatListView" ItemsSource="{Binding StatisticsPerCategories}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HorizontalOptions="StartAndExpand">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    Text="{Binding CategoryName}" />
+                                <Label Grid.Column="2" Text="{Binding AllCost}" />
+                                <Label
+                                    Grid.Column="3"
+                                    FontAttributes="Italic"
+                                    Text="Ft" />
+                                <Label Grid.Column="4" Text="{Binding Percentage}" />
+                                <Label
+                                    Grid.Column="5"
+                                    FontAttributes="Italic"
+                                    Text="%" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</controls:CustomContentPage>
