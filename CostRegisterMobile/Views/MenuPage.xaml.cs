@@ -37,14 +37,14 @@ namespace CostRegisterMobile.Views
         {
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemTypeEnum.Costs, Title="Új költség rögzítése" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.Income, Title="Bevétel rögzítése" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.PlanCost, Title="Költség-előretervezés" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.CostStatistics, Title="Kiadási statisztikák" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.IncomeStatistics, Title="Bevételi statisztikák" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.PlanStatistics, Title="Előretervezési statisztikák" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.CostPerCategoryStatistics, Title="Kiadási statisztikák/kategória" },
-                new HomeMenuItem {Id = MenuItemTypeEnum.Settings, Title="Beállítások" }
+                new HomeMenuItem {Id = MenuItemTypeEnum.Costs, Title = AppResources.AddNewCost },
+                new HomeMenuItem {Id = MenuItemTypeEnum.Income, Title = AppResources.AddNewIncome },
+                new HomeMenuItem {Id = MenuItemTypeEnum.PlanCost, Title = AppResources.PlanCost },
+                new HomeMenuItem {Id = MenuItemTypeEnum.CostStatistics, Title = AppResources.CostsStatistics },
+                new HomeMenuItem {Id = MenuItemTypeEnum.IncomeStatistics, Title = AppResources.IncomeStatistics },
+                new HomeMenuItem {Id = MenuItemTypeEnum.PlanStatistics, Title = AppResources.PlanCostStatistics },
+                new HomeMenuItem {Id = MenuItemTypeEnum.CostPerCategoryStatistics, Title = AppResources.TitleCostsPerCategory },
+                new HomeMenuItem {Id = MenuItemTypeEnum.Settings, Title = AppResources.Settings }
             };
         }
     }

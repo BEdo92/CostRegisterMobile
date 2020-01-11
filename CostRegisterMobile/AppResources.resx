@@ -117,6 +117,81 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdditionalInformations" xml:space="preserve">
+    <value>Megjegyzés</value>
+  </data>
+  <data name="AddNewCategory" xml:space="preserve">
+    <value>Új kategória hozzáadása</value>
+  </data>
+  <data name="AddNewCost" xml:space="preserve">
+    <value>Új kiadás rögzítése</value>
+  </data>
+  <data name="AddNewIncome" xml:space="preserve">
+    <value>Új bevétel rögzítése</value>
+  </data>
+  <data name="AddNewShop" xml:space="preserve">
+    <value>Új üzlet hozzáadása</value>
+  </data>
+  <data name="AmountOfMoney" xml:space="preserve">
+    <value>Összeg (Ft)</value>
+  </data>
+  <data name="ButtonDeleteForm" xml:space="preserve">
+    <value>Űrlap törlése</value>
+  </data>
+  <data name="ButtonDeleteSelectedItem" xml:space="preserve">
+    <value>Kiválasztott törlése</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategória</value>
+  </data>
+  <data name="CostsStatistics" xml:space="preserve">
+    <value>Kiadások statisztikái</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Ft</value>
+  </data>
+  <data name="DateOfCost" xml:space="preserve">
+    <value>Kiadás dátuma</value>
+  </data>
+  <data name="DateOfIncome" xml:space="preserve">
+    <value>Bevétel érkezésének dátuma</value>
+  </data>
+  <data name="DeleteCategory" xml:space="preserve">
+    <value>Kategória törlése</value>
+  </data>
+  <data name="ForStringHasPlans" xml:space="preserve">
+    <value>(Tervezettel)</value>
+  </data>
+  <data name="ForStringNoPlans" xml:space="preserve">
+    <value>(Nincs tervezett)</value>
+  </data>
+  <data name="ForStringNotInvolvePlans" xml:space="preserve">
+    <value>(Tervezettel nem számol)</value>
+  </data>
+  <data name="ForStringTextCurrentBalance" xml:space="preserve">
+    <value>Aktuális egyenleg:</value>
+  </data>
+  <data name="IncomeStatistics" xml:space="preserve">
+    <value>Bevételi statisztikák</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menü</value>
+  </data>
+  <data name="PlanCost" xml:space="preserve">
+    <value>Költség-előretervezés</value>
+  </data>
+  <data name="PlanCostStatistics" xml:space="preserve">
+    <value>Előretervezési statisztikák</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Üzlet</value>
+  </data>
   <data name="TextCategoryAlreadyExists" xml:space="preserve">
     <value>A megadott kategória már létezett!</value>
   </data>
@@ -141,11 +216,20 @@
   <data name="TextShopAlreadyExists" xml:space="preserve">
     <value>A megadott üzlet már létezett!</value>
   </data>
+  <data name="TitleCostsPerCategory" xml:space="preserve">
+    <value>Kiadások kategóriánként</value>
+  </data>
   <data name="TitleError" xml:space="preserve">
     <value>Hiba</value>
   </data>
   <data name="TitleMessage" xml:space="preserve">
     <value>Üzenet</value>
+  </data>
+  <data name="TitleOfIncome" xml:space="preserve">
+    <value>Új bevétel címe</value>
+  </data>
+  <data name="TitleOfPlanCost" xml:space="preserve">
+    <value>Előretervezés címe</value>
   </data>
   <data name="TitleSuccess" xml:space="preserve">
     <value>Sikeres művelet</value>

@@ -6,14 +6,15 @@
     xmlns:controls="clr-namespace:CostRegisterMobile.Views"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Költség-előretervezés"
+    xmlns:resources="clr-namespace:CostRegisterMobile"
+    Title="{x:Static resources:AppResources.PlanCost}"
     mc:Ignorable="d">
     <ContentPage.Content>
         <Grid>
             <ScrollView>
                 <StackLayout>
 
-                    <Label x:Name="titleOfPlannedCostLabel" Text="Kiadás címe:" />
+                    <Label x:Name="titleOfPlannedCostLabel" Text="{x:Static resources:AppResources.TitleOfPlanCost}" />
 
                     <Entry
                         x:Name="titleOfPlanCostEntry"
@@ -22,18 +23,18 @@
 
                     <Picker
                         x:Name="costCategoryPick"
-                        Title="Kiadás kategóriája:"
+                        Title="{x:Static resources:AppResources.Category}"
                         ItemsSource="{Binding Categories}"
                         SelectedItem="{Binding SelectedCategory}" />
 
-                    <Label x:Name="costPlanLavel" Text="Összeg (Ft):" />
+                    <Label x:Name="costPlanLavel" Text="{x:Static resources:AppResources.AmountOfMoney}" />
 
                     <Entry
                         x:Name="planCostInput"
                         Keyboard="Numeric"
                         Text="{Binding PlannedCost}" />
 
-                    <Label x:Name="additionalInfo" Text="Megjegyzés:" />
+                    <Label x:Name="additionalInfo" Text="{x:Static resources:AppResources.AdditionalInformations}" />
 
                     <Entry
                         x:Name="additionalInfoInput"
@@ -43,12 +44,12 @@
                     <Button
                         x:Name="saveCost"
                         Command="{Binding SaveCommand}"
-                        Text="Mentés" />
+                        Text="{x:Static resources:AppResources.ButtonSave}" />
 
                     <Button
                         x:Name="deleteForm"
                         Command="{Binding DeleteCommand}"
-                        Text="Űrlap törlése" />
+                        Text="{x:Static resources:AppResources.ButtonDeleteForm}" />
 
                     <Label x:Name="balanceLabel" Text="{Binding Balance}" />
 

@@ -8,7 +8,7 @@ namespace CostRegisterMobile.Models
 {
     public class BalanceModel
     {
-        private const string toGuiForBalance = "Aktuális egyenleg:";
+        private readonly string toGuiForBalance = AppResources.ForStringTextCurrentBalance;
 
         public IUnitOfWork Repo => DependencyService.Get<IUnitOfWork>();
 
@@ -27,9 +27,9 @@ namespace CostRegisterMobile.Models
         {
             get
             {
-                string infoForInvolvingplans = InvolvePlans ? "(Tervezettel)" : $"(Tervezettel{Environment.NewLine}nem számol)";
-                string infoForHasPlans = HasPlans ? infoForInvolvingplans : "(Nincs tervezett)";
-                return $"{toGuiForBalance} {Environment.NewLine} {Balance.ToString("# ##0")} Ft {infoForHasPlans}";
+                string infoForInvolvingplans = InvolvePlans ? AppResources.ForStringHasPlans : AppResources.ForStringNotInvolvePlans;
+                string infoForHasPlans = HasPlans ? infoForInvolvingplans : AppResources.ForStringNoPlans;
+                return $"{toGuiForBalance} {Environment.NewLine} {Balance.ToString("# ##0")} {AppResources.Currency} {infoForHasPlans}";
             }
         }
 

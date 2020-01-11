@@ -61,6 +61,231 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Megjegyzés.
+        /// </summary>
+        public static string AdditionalInformations {
+            get {
+                return ResourceManager.GetString("AdditionalInformations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új kategória hozzáadása.
+        /// </summary>
+        public static string AddNewCategory {
+            get {
+                return ResourceManager.GetString("AddNewCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új kiadás rögzítése.
+        /// </summary>
+        public static string AddNewCost {
+            get {
+                return ResourceManager.GetString("AddNewCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új bevétel rögzítése.
+        /// </summary>
+        public static string AddNewIncome {
+            get {
+                return ResourceManager.GetString("AddNewIncome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új üzlet hozzáadása.
+        /// </summary>
+        public static string AddNewShop {
+            get {
+                return ResourceManager.GetString("AddNewShop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Összeg (Ft).
+        /// </summary>
+        public static string AmountOfMoney {
+            get {
+                return ResourceManager.GetString("AmountOfMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Űrlap törlése.
+        /// </summary>
+        public static string ButtonDeleteForm {
+            get {
+                return ResourceManager.GetString("ButtonDeleteForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiválasztott törlése.
+        /// </summary>
+        public static string ButtonDeleteSelectedItem {
+            get {
+                return ResourceManager.GetString("ButtonDeleteSelectedItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mentés.
+        /// </summary>
+        public static string ButtonSave {
+            get {
+                return ResourceManager.GetString("ButtonSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kategória.
+        /// </summary>
+        public static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiadások statisztikái.
+        /// </summary>
+        public static string CostsStatistics {
+            get {
+                return ResourceManager.GetString("CostsStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ft.
+        /// </summary>
+        public static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiadás dátuma.
+        /// </summary>
+        public static string DateOfCost {
+            get {
+                return ResourceManager.GetString("DateOfCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bevétel érkezésének dátuma.
+        /// </summary>
+        public static string DateOfIncome {
+            get {
+                return ResourceManager.GetString("DateOfIncome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kategória törlése.
+        /// </summary>
+        public static string DeleteCategory {
+            get {
+                return ResourceManager.GetString("DeleteCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Tervezettel).
+        /// </summary>
+        public static string ForStringHasPlans {
+            get {
+                return ResourceManager.GetString("ForStringHasPlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Nincs tervezett).
+        /// </summary>
+        public static string ForStringNoPlans {
+            get {
+                return ResourceManager.GetString("ForStringNoPlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Tervezettel nem számol).
+        /// </summary>
+        public static string ForStringNotInvolvePlans {
+            get {
+                return ResourceManager.GetString("ForStringNotInvolvePlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aktuális egyenleg:.
+        /// </summary>
+        public static string ForStringTextCurrentBalance {
+            get {
+                return ResourceManager.GetString("ForStringTextCurrentBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bevételi statisztikák.
+        /// </summary>
+        public static string IncomeStatistics {
+            get {
+                return ResourceManager.GetString("IncomeStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menü.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Költség-előretervezés.
+        /// </summary>
+        public static string PlanCost {
+            get {
+                return ResourceManager.GetString("PlanCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Előretervezési statisztikák.
+        /// </summary>
+        public static string PlanCostStatistics {
+            get {
+                return ResourceManager.GetString("PlanCostStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beállítások.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Üzlet.
+        /// </summary>
+        public static string Shop {
+            get {
+                return ResourceManager.GetString("Shop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A megadott kategória már létezett!.
         /// </summary>
         public static string TextCategoryAlreadyExists {
@@ -133,6 +358,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kiadások kategóriánként.
+        /// </summary>
+        public static string TitleCostsPerCategory {
+            get {
+                return ResourceManager.GetString("TitleCostsPerCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hiba.
         /// </summary>
         public static string TitleError {
@@ -147,6 +381,24 @@ namespace CostRegisterMobile {
         public static string TitleMessage {
             get {
                 return ResourceManager.GetString("TitleMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új bevétel címe.
+        /// </summary>
+        public static string TitleOfIncome {
+            get {
+                return ResourceManager.GetString("TitleOfIncome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Előretervezés címe.
+        /// </summary>
+        public static string TitleOfPlanCost {
+            get {
+                return ResourceManager.GetString("TitleOfPlanCost", resourceCulture);
             }
         }
         

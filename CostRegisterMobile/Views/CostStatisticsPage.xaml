@@ -6,7 +6,8 @@
     xmlns:controls="clr-namespace:CostRegisterMobile.Views"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Kiadási statisztikák"
+    xmlns:resources="clr-namespace:CostRegisterMobile"
+    Title="{x:Static resources:AppResources.CostsStatistics}"
     mc:Ignorable="d">
 
     <ContentPage.Content>
@@ -62,7 +63,7 @@
                                     <Label
                                         Grid.Row="2"
                                         Grid.Column="2"
-                                        Text="Ft" />
+                                        Text="{x:Static resources:AppResources.Currency}" />
 
                                     <Label
                                         Grid.Row="3"
@@ -81,7 +82,7 @@
                 <Button
                     x:Name="deleteCostButton"
                     Command="{Binding DeleteCommand}"
-                    Text="Kiválasztott törlése" />
+                    Text="{x:Static resources:AppResources.ButtonDeleteSelectedItem}" />
 
 
             </StackLayout>
