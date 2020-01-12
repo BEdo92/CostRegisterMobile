@@ -147,6 +147,12 @@
   <data name="Category" xml:space="preserve">
     <value>Kategória</value>
   </data>
+  <data name="Clothes" xml:space="preserve">
+    <value>Ruházat</value>
+  </data>
+  <data name="CostNotInShop" xml:space="preserve">
+    <value>Egyéb / Nem üzlet</value>
+  </data>
   <data name="CostsStatistics" xml:space="preserve">
     <value>Kiadások statisztikái</value>
   </data>
@@ -162,6 +168,12 @@
   <data name="DeleteCategory" xml:space="preserve">
     <value>Kategória törlése</value>
   </data>
+  <data name="Extra" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="FoodAndOtherHousehold" xml:space="preserve">
+    <value>Háztartás és élelmiszer</value>
+  </data>
   <data name="ForStringHasPlans" xml:space="preserve">
     <value>(Tervezettel)</value>
   </data>
@@ -174,11 +186,26 @@
   <data name="ForStringTextCurrentBalance" xml:space="preserve">
     <value>Aktuális egyenleg:</value>
   </data>
+  <data name="Health" xml:space="preserve">
+    <value>Egészsségügyi</value>
+  </data>
+  <data name="Hobbies" xml:space="preserve">
+    <value>Hobbi</value>
+  </data>
+  <data name="HouseholdAppliancesAndMaintenance" xml:space="preserve">
+    <value>Háztartási gépek és karbantartás </value>
+  </data>
   <data name="IncomeStatistics" xml:space="preserve">
     <value>Bevételi statisztikák</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Menü</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Egyéb</value>
+  </data>
+  <data name="Overhead" xml:space="preserve">
+    <value>Rezsi</value>
   </data>
   <data name="PlanCost" xml:space="preserve">
     <value>Költség-előretervezés</value>
@@ -186,11 +213,50 @@
   <data name="PlanCostStatistics" xml:space="preserve">
     <value>Előretervezési statisztikák</value>
   </data>
+  <data name="Rental" xml:space="preserve">
+    <value>Lakbér</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Beállítások</value>
   </data>
   <data name="Shop" xml:space="preserve">
     <value>Üzlet</value>
+  </data>
+  <data name="ShopAldi" xml:space="preserve">
+    <value>Aldi</value>
+  </data>
+  <data name="ShopAuch" xml:space="preserve">
+    <value>Auchan</value>
+  </data>
+  <data name="ShopBersh" xml:space="preserve">
+    <value>Bershka</value>
+  </data>
+  <data name="ShopCA" xml:space="preserve">
+    <value>C &amp; A</value>
+  </data>
+  <data name="ShopCoop" xml:space="preserve">
+    <value>Coop</value>
+  </data>
+  <data name="ShopDM" xml:space="preserve">
+    <value>DM</value>
+  </data>
+  <data name="ShopLidl" xml:space="preserve">
+    <value>Lidl</value>
+  </data>
+  <data name="ShopMM" xml:space="preserve">
+    <value>Media Markt</value>
+  </data>
+  <data name="ShopPenny" xml:space="preserve">
+    <value>Penny Market</value>
+  </data>
+  <data name="ShopRM" xml:space="preserve">
+    <value>Rossmann</value>
+  </data>
+  <data name="ShopTesc" xml:space="preserve">
+    <value>Tesco</value>
+  </data>
+  <data name="Sports" xml:space="preserve">
+    <value>Sport</value>
   </data>
   <data name="TextCategoryAlreadyExists" xml:space="preserve">
     <value>A megadott kategória már létezett!</value>

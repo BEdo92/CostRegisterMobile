@@ -30,9 +30,9 @@ namespace CostRegisterMobile.ViewModels
             set
             {
                 SetProperty(ref _selectedCategory, value);
-                if (value == "Egyéb" || value == "Rezsi" || value == "Lakbér" /*|| value == "Extra"*/)
+                if (value == AppResources.Others || value == AppResources.Overhead || value == AppResources.Rental)
                 {
-                    SelectedShop = "Egyéb/nem üzlet";
+                    SelectedShop = AppResources.CostNotInShop;
                 }
                 RefreshCanExecute();
             }

@@ -151,6 +151,24 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ruházat.
+        /// </summary>
+        public static string Clothes {
+            get {
+                return ResourceManager.GetString("Clothes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Egyéb / Nem üzlet.
+        /// </summary>
+        public static string CostNotInShop {
+            get {
+                return ResourceManager.GetString("CostNotInShop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kiadások statisztikái.
         /// </summary>
         public static string CostsStatistics {
@@ -196,6 +214,24 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extra.
+        /// </summary>
+        public static string Extra {
+            get {
+                return ResourceManager.GetString("Extra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Háztartás és élelmiszer.
+        /// </summary>
+        public static string FoodAndOtherHousehold {
+            get {
+                return ResourceManager.GetString("FoodAndOtherHousehold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (Tervezettel).
         /// </summary>
         public static string ForStringHasPlans {
@@ -232,6 +268,33 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Egészsségügyi.
+        /// </summary>
+        public static string Health {
+            get {
+                return ResourceManager.GetString("Health", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hobbi.
+        /// </summary>
+        public static string Hobbies {
+            get {
+                return ResourceManager.GetString("Hobbies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Háztartási gépek és karbantartás .
+        /// </summary>
+        public static string HouseholdAppliancesAndMaintenance {
+            get {
+                return ResourceManager.GetString("HouseholdAppliancesAndMaintenance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bevételi statisztikák.
         /// </summary>
         public static string IncomeStatistics {
@@ -246,6 +309,24 @@ namespace CostRegisterMobile {
         public static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Egyéb.
+        /// </summary>
+        public static string Others {
+            get {
+                return ResourceManager.GetString("Others", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rezsi.
+        /// </summary>
+        public static string Overhead {
+            get {
+                return ResourceManager.GetString("Overhead", resourceCulture);
             }
         }
         
@@ -268,6 +349,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lakbér.
+        /// </summary>
+        public static string Rental {
+            get {
+                return ResourceManager.GetString("Rental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beállítások.
         /// </summary>
         public static string Settings {
@@ -282,6 +372,114 @@ namespace CostRegisterMobile {
         public static string Shop {
             get {
                 return ResourceManager.GetString("Shop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aldi.
+        /// </summary>
+        public static string ShopAldi {
+            get {
+                return ResourceManager.GetString("ShopAldi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auchan.
+        /// </summary>
+        public static string ShopAuch {
+            get {
+                return ResourceManager.GetString("ShopAuch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bershka.
+        /// </summary>
+        public static string ShopBersh {
+            get {
+                return ResourceManager.GetString("ShopBersh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C &amp; A.
+        /// </summary>
+        public static string ShopCA {
+            get {
+                return ResourceManager.GetString("ShopCA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coop.
+        /// </summary>
+        public static string ShopCoop {
+            get {
+                return ResourceManager.GetString("ShopCoop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DM.
+        /// </summary>
+        public static string ShopDM {
+            get {
+                return ResourceManager.GetString("ShopDM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lidl.
+        /// </summary>
+        public static string ShopLidl {
+            get {
+                return ResourceManager.GetString("ShopLidl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Media Markt.
+        /// </summary>
+        public static string ShopMM {
+            get {
+                return ResourceManager.GetString("ShopMM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Penny Market.
+        /// </summary>
+        public static string ShopPenny {
+            get {
+                return ResourceManager.GetString("ShopPenny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rossmann.
+        /// </summary>
+        public static string ShopRM {
+            get {
+                return ResourceManager.GetString("ShopRM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tesco.
+        /// </summary>
+        public static string ShopTesc {
+            get {
+                return ResourceManager.GetString("ShopTesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sport.
+        /// </summary>
+        public static string Sports {
+            get {
+                return ResourceManager.GetString("Sports", resourceCulture);
             }
         }
         
