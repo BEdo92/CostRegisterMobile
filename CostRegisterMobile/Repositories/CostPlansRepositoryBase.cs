@@ -56,6 +56,11 @@ namespace CostRegisterMobile.Repositories
             _dbSet.Remove(entity);
         }
 
+        public virtual void DeleteAllUserDatas()
+        {
+            _dbSet.RemoveRange(_dbSet);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 

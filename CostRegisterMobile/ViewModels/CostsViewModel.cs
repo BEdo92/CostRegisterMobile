@@ -14,11 +14,7 @@ namespace CostRegisterMobile.ViewModels
         private DateTime _date = DateTime.Today;
         private string _additionalInformations;
 
-        public CostsViewModel()
-        {
-        }
-
-        public IEnumerable<string> Categories 
+        public IEnumerable<string> Categories
             => Repo.CategoryRepository.ReadCategory();
 
         public IEnumerable<string> Shops 
@@ -99,6 +95,12 @@ namespace CostRegisterMobile.ViewModels
             SelectedCategory = null;
             SelectedShop = null;
             AdditionalInformations = string.Empty;
+        }
+
+        public override void RefreshPage()
+        {
+            GuiInformation = AppResources.UiInformationAboutNewShop;
+            base.RefreshPage();
         }
 
         protected override async Task ExecuteSaveAsync()

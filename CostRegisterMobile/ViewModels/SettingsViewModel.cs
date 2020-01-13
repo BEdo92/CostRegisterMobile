@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CostRegisterMobile.ViewModels
@@ -15,6 +16,8 @@ namespace CostRegisterMobile.ViewModels
         private string _newCategory;
         private bool _involvePlans = true;
         private IEnumerable<string> _categories;
+
+        private ICommand _deleteDatabaseCommand;
 
         public IEnumerable<string> Categories
         {
@@ -45,7 +48,8 @@ namespace CostRegisterMobile.ViewModels
             get => _involvePlans;
             set => SetProperty(ref _involvePlans, value);
         }
-   
+        public ICommand DeleteDatabaseCommand => _deleteDatabaseCommand ??= new Command(async () => await DeleteUserDatasFromDatabase());
+        
         protected override bool CanExecute()
         {
             return true;
@@ -188,5 +192,20 @@ namespace CostRegisterMobile.ViewModels
                 SelectedCategory = null;
             }
         }
+
+        private async Task DeleteUserDatasFromDatabase()
+        {
+            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteDatabase);
+
+            if (whetherDelete)
+            {
+                Repo.IncomeRepository.DeleteAllUserDatas();
+                Repo.CostsRepository.DeleteAllUserDatas();
+                Repo.PlansRepository.DeleteAllUserDatas();
+
+                await Repo.CommitAsync();
+            }
+        }
+
     }
 }

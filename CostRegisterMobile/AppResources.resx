@@ -135,6 +135,9 @@
   <data name="AmountOfMoney" xml:space="preserve">
     <value>Összeg (Ft)</value>
   </data>
+  <data name="ButtonDeleteDatabase" xml:space="preserve">
+    <value>Adatbázis tartalmának törlése</value>
+  </data>
   <data name="ButtonDeleteForm" xml:space="preserve">
     <value>Űrlap törlése</value>
   </data>
@@ -267,6 +270,9 @@
   <data name="TextConfirmDeleteData" xml:space="preserve">
     <value>Valóban törölni kívánja az adatokat?</value>
   </data>
+  <data name="TextConfirmDeleteDatabase" xml:space="preserve">
+    <value>Valóban törölni kívánja az összes rögzített bevételt, kiadást valamint kiadási tervet?</value>
+  </data>
   <data name="TextConfirmFormDelete" xml:space="preserve">
     <value>Biztosan törölni kívánja a form tartalmát?</value>
   </data>
@@ -302,5 +308,8 @@
   </data>
   <data name="TitleWarning" xml:space="preserve">
     <value>Figyelmeztetés</value>
+  </data>
+  <data name="UiInformationAboutNewShop" xml:space="preserve">
+    <value>Új üzlet, valamint kategória hozzáadására a 'Beállítások' menüpontban van lehetőség.</value>
   </data>
 </root>

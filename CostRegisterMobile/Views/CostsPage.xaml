@@ -57,6 +57,8 @@
 
                     <Label x:Name="balanceLabel" Text="{Binding Balance}" />
 
+                    <Label x:Name="information" Text="{Binding GuiInformation}" />
+
                 </StackLayout>
 
             </ScrollView>

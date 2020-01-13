@@ -53,6 +53,11 @@
                         Command="{Binding DeleteCommand}"
                         Text="{x:Static resources:AppResources.ButtonDeleteForm}" />
 
+                    <Button
+                        x:Name="deleteDatabase"
+                        Command="{Binding DeleteDatabaseCommand}"
+                        Text="{x:Static resources:AppResources.ButtonDeleteDatabase}" />
+
                 </StackLayout>
 
             </ScrollView>

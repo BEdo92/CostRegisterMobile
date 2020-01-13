@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using CostRegisterMobile.Repositories;
 using CostRegisterMobile.Helpers;
 using System.Threading.Tasks;
 using CostRegisterMobile.Models;
 using Xamarin.Forms;
+using System.Runtime.CompilerServices;
 
 namespace CostRegisterMobile.ViewModels
 {
@@ -18,6 +18,7 @@ namespace CostRegisterMobile.ViewModels
 
         private string _balance;
         private bool _isBusy = false;
+        private string _guiInformation;
 
         public ICommand DeleteCommand =>
             _deleteCommand ??= new Command(async () => await ExecuteDeleteAsync());
@@ -36,7 +37,7 @@ namespace CostRegisterMobile.ViewModels
 
         public string Balance
         {
-            get => _balance ??= BalanceModel.BalanceString;
+            get => _balance;
             set => SetProperty(ref _balance, value);
         }
 
@@ -45,6 +46,13 @@ namespace CostRegisterMobile.ViewModels
             get => _isBusy;
             set => SetProperty(ref _isBusy, value);
         }
+
+        public string GuiInformation
+        { 
+            get => _guiInformation; 
+            set => SetProperty(ref _guiInformation, value); 
+        }
+
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",

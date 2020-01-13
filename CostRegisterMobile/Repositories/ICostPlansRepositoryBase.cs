@@ -11,5 +11,6 @@ namespace CostRegisterMobile.Repositories
         void Update(int id);
         void Delete(int id);
         void Delete(TEntity entity);
+        void DeleteAllUserDatas();
     }
 }

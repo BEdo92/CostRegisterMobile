@@ -115,6 +115,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adatbázis tartalmának törlése.
+        /// </summary>
+        public static string ButtonDeleteDatabase {
+            get {
+                return ResourceManager.GetString("ButtonDeleteDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Űrlap törlése.
         /// </summary>
         public static string ButtonDeleteForm {
@@ -511,6 +520,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Valóban törölni kívánja az összes rögzített bevételt, kiadást valamint kiadási tervet?.
+        /// </summary>
+        public static string TextConfirmDeleteDatabase {
+            get {
+                return ResourceManager.GetString("TextConfirmDeleteDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Biztosan törölni kívánja a form tartalmát?.
         /// </summary>
         public static string TextConfirmFormDelete {
@@ -615,6 +633,15 @@ namespace CostRegisterMobile {
         public static string TitleWarning {
             get {
                 return ResourceManager.GetString("TitleWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Új üzlet, valamint kategória hozzáadására a &apos;Beállítások&apos; menüpontban van lehetőség..
+        /// </summary>
+        public static string UiInformationAboutNewShop {
+            get {
+                return ResourceManager.GetString("UiInformationAboutNewShop", resourceCulture);
             }
         }
     }
