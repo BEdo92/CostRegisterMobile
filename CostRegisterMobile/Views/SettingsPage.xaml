@@ -24,7 +24,7 @@
 
                     <Picker
                         x:Name="pickDeleteCategoryPick"
-                        Title="Kategória törlése"
+                        Title="{x:Static resources:AppResources.DeleteCategory}"
                         ItemsSource="{Binding Categories}"
                         SelectedItem="{Binding SelectedCategory}" />
 
@@ -37,7 +37,7 @@
 
                     <!--  SETTING - PLANS SHOULD BE INVOLVED  -->
 
-                    <Label x:Name="involvePlans" Text="Egyenleg megjelenítése az előtervezett levonásával" />
+                    <Label x:Name="involvePlans" Text="{x:Static resources:AppResources.SetIfPlansInvolved}" />
 
                     <Switch IsToggled="{Binding InvolvePlans}" />
 

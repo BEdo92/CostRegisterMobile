@@ -59,7 +59,7 @@ namespace CostRegisterMobile.ViewModels
         {
             Busy();
 
-            var whetherSave = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmChangeSettings);
+            var whetherSave = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmChangeSettings, AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherSave)
             {
@@ -183,7 +183,7 @@ namespace CostRegisterMobile.ViewModels
 
         protected override async Task ExecuteDeleteAsync()
         {
-            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete);
+            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete,AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherDelete)
             {
@@ -195,7 +195,7 @@ namespace CostRegisterMobile.ViewModels
 
         private async Task DeleteUserDatasFromDatabase()
         {
-            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteDatabase);
+            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteDatabase, AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherDelete)
             {

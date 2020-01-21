@@ -118,118 +118,121 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdditionalInformations" xml:space="preserve">
-    <value>Megjegyzés</value>
+    <value>Additional Informations</value>
   </data>
   <data name="AddNewCategory" xml:space="preserve">
-    <value>Új kategória hozzáadása</value>
+    <value>New category</value>
   </data>
   <data name="AddNewCost" xml:space="preserve">
-    <value>Új kiadás rögzítése</value>
+    <value>New cost</value>
   </data>
   <data name="AddNewIncome" xml:space="preserve">
-    <value>Új bevétel rögzítése</value>
+    <value>New income</value>
   </data>
   <data name="AddNewShop" xml:space="preserve">
-    <value>Új üzlet hozzáadása</value>
+    <value>New shop</value>
   </data>
   <data name="AmountOfMoney" xml:space="preserve">
-    <value>Összeg (Ft)</value>
+    <value>Money</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Mégse</value>
+    <value>Cancel</value>
   </data>
   <data name="ButtonDeleteDatabase" xml:space="preserve">
-    <value>Adatbázis tartalmának törlése</value>
+    <value>Delete all cost, income and plan datas</value>
   </data>
   <data name="ButtonDeleteForm" xml:space="preserve">
-    <value>Űrlap törlése</value>
+    <value>Delete</value>
   </data>
   <data name="ButtonDeleteSelectedItem" xml:space="preserve">
-    <value>Kiválasztott törlése</value>
+    <value>Delete selected</value>
   </data>
   <data name="ButtonSave" xml:space="preserve">
-    <value>Mentés</value>
+    <value>Save</value>
   </data>
   <data name="Category" xml:space="preserve">
-    <value>Kategória</value>
+    <value>Category</value>
   </data>
   <data name="Clothes" xml:space="preserve">
-    <value>Ruházat</value>
+    <value>Clothes</value>
   </data>
   <data name="CostNotInShop" xml:space="preserve">
-    <value>Egyéb / Nem üzlet</value>
+    <value>Other / Not shop</value>
   </data>
   <data name="CostsStatistics" xml:space="preserve">
-    <value>Kiadások statisztikái</value>
+    <value>Statistics of costs</value>
   </data>
   <data name="Currency" xml:space="preserve">
     <value>Ft</value>
   </data>
   <data name="DateOfCost" xml:space="preserve">
-    <value>Kiadás dátuma</value>
+    <value>Date</value>
   </data>
   <data name="DateOfIncome" xml:space="preserve">
-    <value>Bevétel érkezésének dátuma</value>
+    <value>Income arrived at</value>
   </data>
   <data name="DeleteCategory" xml:space="preserve">
-    <value>Kategória törlése</value>
+    <value>Delete category</value>
   </data>
   <data name="Extra" xml:space="preserve">
     <value>Extra</value>
   </data>
   <data name="FoodAndOtherHousehold" xml:space="preserve">
-    <value>Háztartás és élelmiszer</value>
+    <value>Food / other household</value>
   </data>
   <data name="ForStringHasPlans" xml:space="preserve">
-    <value>(Tervezettel)</value>
+    <value>(Plans involved)</value>
   </data>
   <data name="ForStringNoPlans" xml:space="preserve">
-    <value>(Nincs tervezett)</value>
+    <value>(No plans)</value>
   </data>
   <data name="ForStringNotInvolvePlans" xml:space="preserve">
-    <value>(Tervezettel nem számol)</value>
+    <value>(Plans does not involved)</value>
   </data>
   <data name="ForStringTextCurrentBalance" xml:space="preserve">
-    <value>Aktuális egyenleg:</value>
+    <value>Balance</value>
   </data>
   <data name="Health" xml:space="preserve">
-    <value>Egészsségügyi</value>
+    <value>Health</value>
   </data>
   <data name="Hobbies" xml:space="preserve">
-    <value>Hobbi</value>
+    <value>Hobbies</value>
   </data>
   <data name="HouseholdAppliancesAndMaintenance" xml:space="preserve">
-    <value>Háztartási gépek és karbantartás </value>
+    <value>Household appliances and maintenance</value>
   </data>
   <data name="IncomeStatistics" xml:space="preserve">
-    <value>Bevételi statisztikák</value>
+    <value>Statistics of income</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="Menu" xml:space="preserve">
-    <value>Menü</value>
+    <value>Menu</value>
   </data>
   <data name="Others" xml:space="preserve">
-    <value>Egyéb</value>
+    <value>Others</value>
   </data>
   <data name="Overhead" xml:space="preserve">
-    <value>Rezsi</value>
+    <value>Overhead</value>
   </data>
   <data name="PlanCost" xml:space="preserve">
-    <value>Költség-előretervezés</value>
+    <value>Planning costs</value>
   </data>
   <data name="PlanCostStatistics" xml:space="preserve">
-    <value>Előretervezési statisztikák</value>
+    <value>Statistics of planned costs</value>
   </data>
   <data name="Rental" xml:space="preserve">
-    <value>Lakbér</value>
+    <value>Rental</value>
   </data>
   <data name="SetIfPlansInvolved" xml:space="preserve">
-    <value>Egyenleg megjelenítése az előtervezett levonásával</value>
+    <value>Show balance with also counting the planned costs</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Beállítások</value>
+    <value>Settings</value>
   </data>
   <data name="Shop" xml:space="preserve">
-    <value>Üzlet</value>
+    <value>Shop</value>
   </data>
   <data name="ShopAldi" xml:space="preserve">
     <value>Aldi</value>
@@ -241,7 +244,7 @@
     <value>Bershka</value>
   </data>
   <data name="ShopCA" xml:space="preserve">
-    <value>C &amp; A</value>
+    <value>C&amp;A</value>
   </data>
   <data name="ShopCoop" xml:space="preserve">
     <value>Coop</value>
@@ -253,7 +256,7 @@
     <value>Lidl</value>
   </data>
   <data name="ShopMM" xml:space="preserve">
-    <value>Media Markt</value>
+    <value>MediaMarkt</value>
   </data>
   <data name="ShopPenny" xml:space="preserve">
     <value>Penny Market</value>
@@ -265,57 +268,54 @@
     <value>Tesco</value>
   </data>
   <data name="Sports" xml:space="preserve">
-    <value>Sport</value>
+    <value>Sports</value>
   </data>
   <data name="TextCategoryAlreadyExists" xml:space="preserve">
-    <value>A megadott kategória már létezett!</value>
+    <value>The category is already exists!</value>
   </data>
   <data name="TextConfirmChangeSettings" xml:space="preserve">
-    <value>Valóban el kívánja végezni a kijelölt módosításokat az adatbázisban?</value>
+    <value>Do you really want to save the new settings?</value>
   </data>
   <data name="TextConfirmDeleteData" xml:space="preserve">
-    <value>Valóban törölni kívánja az adatokat?</value>
+    <value>Do you really want to delete the data?</value>
   </data>
   <data name="TextConfirmDeleteDatabase" xml:space="preserve">
-    <value>Valóban törölni kívánja az összes rögzített bevételt, kiadást valamint kiadási tervet?</value>
+    <value>Do you really want to delete all costs, income and plans from the database?</value>
   </data>
   <data name="TextConfirmFormDelete" xml:space="preserve">
-    <value>Biztosan törölni kívánja a form tartalmát?</value>
+    <value>Do you really want to delete the form?</value>
   </data>
   <data name="TextError" xml:space="preserve">
-    <value>Váratlan hiba történt a művelet elvégzése során!</value>
+    <value>Unexpected error occured.</value>
   </data>
   <data name="TextSaveSuccess" xml:space="preserve">
-    <value>Az adatok mentése sikeresen megtörtént!</value>
+    <value>Data saved successfully.</value>
   </data>
   <data name="TextSettingsAlreadyMatch" xml:space="preserve">
-    <value>Nem került sor módosításokra, mert nem adott meg olyan adatot az űrlapon, ami az eddigi beállításoktól eltérő!</value>
+    <value>No changes were made, since the settings was already matched!</value>
   </data>
   <data name="TextShopAlreadyExists" xml:space="preserve">
-    <value>A megadott üzlet már létezett!</value>
+    <value>The shop is already exists!</value>
   </data>
   <data name="TitleCostsPerCategory" xml:space="preserve">
-    <value>Kiadások kategóriánként</value>
+    <value>Statistics of costs per categories</value>
   </data>
   <data name="TitleError" xml:space="preserve">
-    <value>Hiba</value>
-  </data>
-  <data name="TitleMessage" xml:space="preserve">
-    <value>Üzenet</value>
+    <value>Error</value>
   </data>
   <data name="TitleOfIncome" xml:space="preserve">
-    <value>Új bevétel címe (pl. fizetés)</value>
+    <value>Title of income (e.g. salary)</value>
   </data>
   <data name="TitleOfPlanCost" xml:space="preserve">
-    <value>Előretervezés címe</value>
+    <value>Title of planned cost</value>
   </data>
   <data name="TitleSuccess" xml:space="preserve">
-    <value>Sikeres művelet</value>
+    <value>Success</value>
   </data>
   <data name="TitleWarning" xml:space="preserve">
-    <value>Figyelmeztetés</value>
+    <value>Warning</value>
   </data>
   <data name="UiInformationAboutNewShop" xml:space="preserve">
-    <value>Új üzlet, valamint kategória hozzáadására a 'Beállítások' menüpontban van lehetőség.</value>
+    <value>You can add new categories and shops under 'Settings' page.</value>
   </data>
 </root>

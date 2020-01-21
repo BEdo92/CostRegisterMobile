@@ -115,6 +115,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mégse.
+        /// </summary>
+        public static string ButtonCancel {
+            get {
+                return ResourceManager.GetString("ButtonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adatbázis tartalmának törlése.
         /// </summary>
         public static string ButtonDeleteDatabase {
@@ -367,6 +376,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Egyenleg megjelenítése az előtervezett levonásával.
+        /// </summary>
+        public static string SetIfPlansInvolved {
+            get {
+                return ResourceManager.GetString("SetIfPlansInvolved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beállítások.
         /// </summary>
         public static string Settings {
@@ -601,7 +619,7 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Új bevétel címe.
+        ///   Looks up a localized string similar to Új bevétel címe (pl. fizetés).
         /// </summary>
         public static string TitleOfIncome {
             get {

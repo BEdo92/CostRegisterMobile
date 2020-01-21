@@ -30,7 +30,7 @@ namespace CostRegisterMobile.ViewModels
         protected override async Task ExecuteDeleteAsync()
         {
             Busy();
-            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteData))
+            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteData, AppResources.TitleWarning, AppResources.ButtonCancel))
             {
                 Repo.CostsRepository.Delete(SelectedRecord.ID);
                 await Repo.CommitAsync();

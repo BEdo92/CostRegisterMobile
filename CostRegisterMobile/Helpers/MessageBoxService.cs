@@ -1,5 +1,4 @@
 ﻿using CostRegisterMobile.Helpers;
-using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -9,9 +8,10 @@ namespace CostRegister.Helpers
     {
         public async Task<bool> ShowConfirmation(
             string message,
-            string title = "Figyelmeztetés!",            
-            string buttonConfirmText = "OK",
-            string buttonCancelText = "Mégse")
+            string title, 
+            string buttonCancelText,
+            string buttonConfirmText = "OK"
+         )
         {
             var result = await Application.Current.MainPage.DisplayAlert(
                     title,

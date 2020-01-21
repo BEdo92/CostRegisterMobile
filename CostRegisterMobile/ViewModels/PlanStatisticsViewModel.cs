@@ -30,7 +30,7 @@ namespace CostRegisterMobile.ViewModels
         {
             Busy();
 
-            if (await MessageBoxService.ShowConfirmation("Valóban törölni kívánja az adatokat?", "Figyelmeztetés!")
+            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteData, AppResources.TitleWarning, AppResources.ButtonCancel)
                 && SelectedRecord != null)
             {
                 Repo.PlansRepository.Delete(SelectedRecord.ID);

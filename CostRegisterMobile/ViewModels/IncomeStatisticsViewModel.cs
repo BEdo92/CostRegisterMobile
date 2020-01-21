@@ -30,7 +30,7 @@ namespace CostRegisterMobile.ViewModels
         {
             Busy();
 
-            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete))
+            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete, AppResources.TitleWarning, AppResources.ButtonCancel))
             {
                 Repo.IncomeRepository.Delete(SelectedRecord.IncomeID);
                 await Repo.CommitAsync();
