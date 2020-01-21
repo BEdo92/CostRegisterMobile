@@ -12,6 +12,23 @@
     <ContentPage.Content>
         <Grid>
             <StackLayout>
+
+                <Picker
+                    x:Name="costCategoryPick"
+                    Title="{x:Static resources:AppResources.Category}"
+                    ItemsSource="{Binding Categories}"
+                    SelectedItem="{Binding SelectedListItem}" />
+
+                <Button
+                    x:Name="buttonShowSpecificIncomePerCategory"
+                    Command="{Binding ShowSpecificCommand}"
+                    Text="{x:Static resources:AppResources.ButtonShowPlansForCategory}" />
+
+                <Button
+                    x:Name="buttonShowAllIncome"
+                    Command="{Binding ShowAllCommand}"
+                    Text="{x:Static resources:AppResources.ButtonShowPlans}" />
+
                 <ListView
                     x:Name="PlanStatListView"
                     ItemsSource="{Binding PlanStatisticsList}"

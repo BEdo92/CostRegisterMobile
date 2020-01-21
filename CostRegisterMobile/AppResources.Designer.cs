@@ -160,6 +160,24 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tervek mutatása.
+        /// </summary>
+        public static string ButtonShowPlans {
+            get {
+                return ResourceManager.GetString("ButtonShowPlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiválasztott kategória terveinek mutatása.
+        /// </summary>
+        public static string ButtonShowPlansForCategory {
+            get {
+                return ResourceManager.GetString("ButtonShowPlansForCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kategória.
         /// </summary>
         public static string Category {
@@ -286,7 +304,7 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Egészsségügyi.
+        ///   Looks up a localized string similar to Egészségügyi.
         /// </summary>
         public static string Health {
             get {
@@ -502,6 +520,24 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Összes kiadás.
+        /// </summary>
+        public static string ShowAllCosts {
+            get {
+                return ResourceManager.GetString("ShowAllCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiválasztott kategória kiadásai.
+        /// </summary>
+        public static string ShowSpecificCostsForCategory {
+            get {
+                return ResourceManager.GetString("ShowSpecificCostsForCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sport.
         /// </summary>
         public static string Sports {
@@ -597,6 +633,15 @@ namespace CostRegisterMobile {
         public static string TitleCostsPerCategory {
             get {
                 return ResourceManager.GetString("TitleCostsPerCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Részletes kiadások kategóriánként.
+        /// </summary>
+        public static string TitleDetailedCostsPerCategories {
+            get {
+                return ResourceManager.GetString("TitleDetailedCostsPerCategories", resourceCulture);
             }
         }
         

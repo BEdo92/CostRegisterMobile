@@ -150,6 +150,12 @@
   <data name="ButtonSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="ButtonShowPlans" xml:space="preserve">
+    <value>Show plans</value>
+  </data>
+  <data name="ButtonShowPlansForCategory" xml:space="preserve">
+    <value>Show plans of selected category</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
@@ -267,6 +273,12 @@
   <data name="ShopTesc" xml:space="preserve">
     <value>Tesco</value>
   </data>
+  <data name="ShowAllCosts" xml:space="preserve">
+    <value>Show all costs</value>
+  </data>
+  <data name="ShowSpecificCostsForCategory" xml:space="preserve">
+    <value>Costs for picked category</value>
+  </data>
   <data name="Sports" xml:space="preserve">
     <value>Sports</value>
   </data>
@@ -299,6 +311,9 @@
   </data>
   <data name="TitleCostsPerCategory" xml:space="preserve">
     <value>Statistics of costs per categories</value>
+  </data>
+  <data name="TitleDetailedCostsPerCategories" xml:space="preserve">
+    <value>Detailed costs for categories</value>
   </data>
   <data name="TitleError" xml:space="preserve">
     <value>Error</value>

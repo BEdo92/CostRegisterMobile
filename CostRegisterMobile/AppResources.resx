@@ -150,6 +150,12 @@
   <data name="ButtonSave" xml:space="preserve">
     <value>Mentés</value>
   </data>
+  <data name="ButtonShowPlans" xml:space="preserve">
+    <value>Tervek mutatása</value>
+  </data>
+  <data name="ButtonShowPlansForCategory" xml:space="preserve">
+    <value>Kiválasztott kategória terveinek mutatása</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Kategória</value>
   </data>
@@ -193,7 +199,7 @@
     <value>Aktuális egyenleg:</value>
   </data>
   <data name="Health" xml:space="preserve">
-    <value>Egészsségügyi</value>
+    <value>Egészségügyi</value>
   </data>
   <data name="Hobbies" xml:space="preserve">
     <value>Hobbi</value>
@@ -264,6 +270,12 @@
   <data name="ShopTesc" xml:space="preserve">
     <value>Tesco</value>
   </data>
+  <data name="ShowAllCosts" xml:space="preserve">
+    <value>Összes kiadás</value>
+  </data>
+  <data name="ShowSpecificCostsForCategory" xml:space="preserve">
+    <value>Kiválasztott kategória kiadásai</value>
+  </data>
   <data name="Sports" xml:space="preserve">
     <value>Sport</value>
   </data>
@@ -296,6 +308,9 @@
   </data>
   <data name="TitleCostsPerCategory" xml:space="preserve">
     <value>Kiadások kategóriánként</value>
+  </data>
+  <data name="TitleDetailedCostsPerCategories" xml:space="preserve">
+    <value>Részletes kiadások kategóriánként</value>
   </data>
   <data name="TitleError" xml:space="preserve">
     <value>Hiba</value>

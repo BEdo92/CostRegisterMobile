@@ -15,6 +15,22 @@
 
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
+                <Picker
+                    x:Name="costCategoryPick"
+                    Title="{x:Static resources:AppResources.Category}"
+                    ItemsSource="{Binding Categories}"
+                    SelectedItem="{Binding SelectedListItem}" />
+
+                <Button
+                    x:Name="buttonShowSpecificCostPerCategory"
+                    Command="{Binding ShowSpecificCommand}"
+                    Text="{x:Static resources:AppResources.ShowSpecificCostsForCategory}" />
+
+                <Button
+                    x:Name="buttonShowAllCosts"
+                    Command="{Binding ShowAllCommand}"
+                    Text="{x:Static resources:AppResources.ShowAllCosts}" />
+
                 <ListView
                     x:Name="AllCostStatListView"
                     ItemsSource="{Binding CostStatisticsList}"

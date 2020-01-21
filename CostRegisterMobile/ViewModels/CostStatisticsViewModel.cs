@@ -9,6 +9,9 @@ namespace CostRegisterMobile.ViewModels
     {
         private IEnumerable<CostsStatisticsModel> _costStatisticsList;
 
+        public IEnumerable<string> Categories
+           => Repo.CategoryRepository.ReadCategory();
+
         public IEnumerable<CostsStatisticsModel> CostStatisticsList
         {
             get => _costStatisticsList; 
@@ -22,9 +25,24 @@ namespace CostRegisterMobile.ViewModels
 
         public override void RefreshPage()
         {
-            CostStatisticsList = Repo.CostsRepository
-                    .ReadCostsToStatModel()
-                    .OrderByDescending(d => d.DateTime);
+            RefreshList();
+        }
+
+        protected override void RefreshList()
+        {
+            if (SelectedListItem != null)
+            {
+                CostStatisticsList = Repo.CostsRepository
+                                .ReadCostsToStatModel()
+                                .Where(c => c.Category == SelectedListItem)
+                                .OrderByDescending(d => d.DateTime);
+            }
+            else
+            {
+                CostStatisticsList = Repo.CostsRepository
+                                .ReadCostsToStatModel()
+                                .OrderByDescending(d => d.DateTime);
+            }
         }
 
         protected override async Task ExecuteDeleteAsync()
@@ -36,6 +54,7 @@ namespace CostRegisterMobile.ViewModels
                 await Repo.CommitAsync();
 
                 SelectedRecord = null;
+                SelectedListItem = null;
                 CostStatisticsList = Repo.CostsRepository.ReadCostsToStatModel();
             }
             NotBusy();

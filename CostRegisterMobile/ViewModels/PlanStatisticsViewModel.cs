@@ -19,11 +19,29 @@ namespace CostRegisterMobile.ViewModels
             }
         }
 
+        public IEnumerable<string> Categories
+          => Repo.CategoryRepository.ReadCategory();
+
         public override void RefreshPage()
         {
-            PlanStatisticsList = Repo.PlansRepository
-                        .ReadAllPlanCost()
-                        .OrderByDescending(d => d.DateOfPlan);
+            RefreshList();
+        }
+
+        protected override void RefreshList()
+        {
+            if (SelectedListItem != null)
+            {
+                PlanStatisticsList = Repo.PlansRepository
+                           .ReadAllPlanCost()
+                           .Where(c => c.CategoryName == SelectedListItem)
+                           .OrderByDescending(d => d.DateOfPlan);
+            }
+            else
+            {
+                PlanStatisticsList = Repo.PlansRepository
+                             .ReadAllPlanCost()
+                             .OrderByDescending(d => d.DateOfPlan);
+            }
         }
 
         protected override async Task ExecuteDeleteAsync()
