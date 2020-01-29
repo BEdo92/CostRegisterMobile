@@ -24,6 +24,8 @@ namespace CostRegisterMobile.ViewModels
             IncomeStatisticsList = Repo.IncomeRepository
                         .GetAll()
                         .OrderByDescending(d => d.DateOFIncome);
+
+            Notifications = IncomeStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
         }
 
         protected override async Task ExecuteDeleteAsync()

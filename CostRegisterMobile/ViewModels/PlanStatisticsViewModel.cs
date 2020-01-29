@@ -22,13 +22,8 @@ namespace CostRegisterMobile.ViewModels
         public IEnumerable<string> Categories
           => Repo.CategoryRepository.ReadCategory();
 
-        public override void RefreshPage()
-        {
-            RefreshList();
-        }
-
         protected override void RefreshList()
-        {
+        {            
             if (SelectedListItem != null)
             {
                 PlanStatisticsList = Repo.PlansRepository
@@ -42,6 +37,9 @@ namespace CostRegisterMobile.ViewModels
                              .ReadAllPlanCost()
                              .OrderByDescending(d => d.DateOfPlan);
             }
+
+            Notifications = PlanStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
+
         }
 
         protected override async Task ExecuteDeleteAsync()

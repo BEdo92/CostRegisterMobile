@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace CostRegisterMobile.Helpers
+namespace CostRegisterMobile.Services
 {
-    public interface IMessageBoxService
+    public interface IDialogService
     {
         Task<bool> ShowConfirmation(string message, string title, string buttonCancelText, string buttonConfirmText = "OK");
+
         Task ShowMessage(string message, string title);
     }
 }

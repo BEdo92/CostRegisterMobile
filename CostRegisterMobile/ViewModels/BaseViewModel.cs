@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
 using CostRegisterMobile.Repositories;
-using CostRegisterMobile.Helpers;
+using CostRegisterMobile.Services;
 using System.Threading.Tasks;
 using CostRegisterMobile.Models;
 using Xamarin.Forms;
@@ -26,8 +26,8 @@ namespace CostRegisterMobile.ViewModels
         public ICommand SaveCommand =>
             _saveCommand ??= new Command(async () => await ExecuteSaveAsync(), CanExecute);
 
-        public IMessageBoxService MessageBoxService =>
-            DependencyService.Get<IMessageBoxService>();
+        public IDialogService MessageBoxService =>
+            DependencyService.Get<IDialogService>();
 
         public BalanceModel BalanceModel =>
             DependencyService.Get<BalanceModel>();

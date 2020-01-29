@@ -49,6 +49,8 @@
 
             </ListView>
 
+            <Label x:Name="LabelNotifications" Text="{Binding Notifications}" />
+
         </StackLayout>
     </ContentPage.Content>
 </controls:CustomContentPage>

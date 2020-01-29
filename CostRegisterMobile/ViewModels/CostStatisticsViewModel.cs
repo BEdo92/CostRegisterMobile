@@ -23,11 +23,6 @@ namespace CostRegisterMobile.ViewModels
             }
         }
 
-        public override void RefreshPage()
-        {
-            RefreshList();
-        }
-
         protected override void RefreshList()
         {
             if (SelectedListItem != null)
@@ -43,6 +38,8 @@ namespace CostRegisterMobile.ViewModels
                                 .ReadCostsToStatModel()
                                 .OrderByDescending(d => d.DateTime);
             }
+
+            Notifications = CostStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
         }
 
         protected override async Task ExecuteDeleteAsync()

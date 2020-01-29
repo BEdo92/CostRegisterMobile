@@ -216,6 +216,9 @@
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
+  <data name="NotificationsNoStatData" xml:space="preserve">
+    <value>No data found for this setting.</value>
+  </data>
   <data name="Others" xml:space="preserve">
     <value>Others</value>
   </data>

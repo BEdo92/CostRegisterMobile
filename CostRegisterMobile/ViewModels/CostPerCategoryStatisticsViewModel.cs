@@ -6,6 +6,8 @@ namespace CostRegisterMobile.ViewModels
 {
     class CostPerCategoryStatisticsViewModel : StatisticsBaseViewModel<CostStatisticsPerCategory>
     {
+        private List<CostStatisticsPerCategory> _statisticsPerCategories;
+
         public IEnumerable<CostsStatisticsModel> CostStatisticsList =>
             Repo.CostsRepository
                     .ReadCostsToStatModel()
@@ -13,34 +15,46 @@ namespace CostRegisterMobile.ViewModels
 
         public List<CostStatisticsPerCategory> StatisticsPerCategories
         {
-            get
+            get => _statisticsPerCategories;
+            set => SetProperty(ref _statisticsPerCategories, value);
+        }
+
+        protected override void RefreshList()
+        {
+            StatisticsPerCategories = SumCostsPerCategories();
+        }
+
+        private List<CostStatisticsPerCategory> SumCostsPerCategories()
+        {
+            Busy();
+
+            List<CostStatisticsPerCategory> statsPerCategories = new List<CostStatisticsPerCategory>();
+
+            // first get the categories that already have costs saved
+            IEnumerable<string> categoriesWithSavedData = CostStatisticsList
+                .Select(c => c.Category)
+                .Distinct();
+
+            foreach (var currentCategory in categoriesWithSavedData)
             {
-                Busy();
+                // get the total costs for each category
+                var allCostPerCurrentCategory = CostStatisticsList
+                    .Where(c => c.Category == currentCategory)
+                    .Sum(costStat => costStat.Cost);
 
-                List<CostStatisticsPerCategory> statsPerCat = new List<CostStatisticsPerCategory>();
-                IEnumerable<string> cats = CostStatisticsList
-                    .Select(c => c.Category)
-                    .Distinct();
-
-                foreach (var cat in cats)
+                statsPerCategories.Add(new CostStatisticsPerCategory
                 {
-                    int catAllCostTemp = CostStatisticsList
-                        .Where(c => c.Category == cat)
-                        .Sum(sl => sl.Cost);
-
-                    statsPerCat.Add(new CostStatisticsPerCategory
-                    {
-                        CategoryName = cat,
-                        AllCost = catAllCostTemp,
-                        Percentage = (int)(catAllCostTemp / (double)CostStatisticsList.Sum(sl => sl.Cost) * 100)
-                    });
-                }
-
-                var orderedStats = statsPerCat.OrderByDescending(x => x.AllCost).ToList();
-
-                NotBusy();
-                return orderedStats;
+                    CategoryName = currentCategory,
+                    AllCost = allCostPerCurrentCategory,
+                    Percentage = (int)(allCostPerCurrentCategory / (double)CostStatisticsList.Sum(s => s.Cost) * 100)
+                });
             }
+
+            var orderedStats = statsPerCategories.OrderByDescending(x => x.AllCost).ToList();
+
+            NotBusy();
+            Notifications = orderedStats.Any() ? string.Empty : AppResources.NotificationsNoStatData;
+            return orderedStats;
         }
     }
 }

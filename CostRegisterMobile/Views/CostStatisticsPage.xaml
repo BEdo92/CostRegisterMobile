@@ -95,6 +95,8 @@
 
                 </ListView>
 
+                <Label x:Name="LabelNotification" Text="{Binding Notifications}" />
+
                 <Button
                     x:Name="deleteCostButton"
                     Command="{Binding DeleteCommand}"

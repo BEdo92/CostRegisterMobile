@@ -1,10 +1,10 @@
-﻿using CostRegisterMobile.Helpers;
+﻿using CostRegisterMobile.Services;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace CostRegister.Helpers
+namespace CostRegister.Services
 {
-    public class MessageBoxService : IMessageBoxService
+    public class DialogService : IDialogService
     {
         public async Task<bool> ShowConfirmation(
             string message,

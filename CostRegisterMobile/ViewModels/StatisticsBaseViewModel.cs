@@ -12,6 +12,7 @@ namespace CostRegisterMobile.ViewModels
         private ICommand _deleteCommand;
         private T _selectedRecord;
         private string _selectedListItem;
+        private string _notifications = null;
 
         public new ICommand DeleteCommand =>
             _deleteCommand ??= new Command(async () => await ExecuteDeleteAsync(), CanDeleteBeEnabled);
@@ -33,9 +34,14 @@ namespace CostRegisterMobile.ViewModels
             _showSpecificCommand ??= new Command(ShowSpecificCosts);
 
         public string SelectedListItem
-        { 
+        {
             get => _selectedListItem; 
             set => SetProperty(ref _selectedListItem, value); 
+        }
+        public string Notifications 
+        { 
+            get => _notifications; 
+            set => SetProperty(ref _notifications, value); 
         }
 
         protected bool CanDeleteBeEnabled()
@@ -56,6 +62,11 @@ namespace CostRegisterMobile.ViewModels
         protected override Task ExecuteSaveAsync()
         {
             throw new NotImplementedException();
+        }
+
+        public override void RefreshPage()
+        {
+            RefreshList();
         }
 
         protected virtual void RefreshList() { }

@@ -1,7 +1,7 @@
 ﻿using CostRegisterMobile.EntityModels;
 using CostRegisterMobile.Models;
 
-namespace CostRegisterMobile.Helpers
+namespace CostRegisterMobile.Services
 {
     public static class Mappers
     {

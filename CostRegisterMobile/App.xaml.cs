@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using CostRegisterMobile.Views;
-using CostRegisterMobile.Helpers;
-using CostRegister.Helpers;
+using CostRegisterMobile.Services;
+using CostRegister.Services;
 using CostRegisterMobile.Repositories;
 using CostRegisterMobile.EntityModels;
 using CostRegisterMobile.Models;
@@ -15,7 +15,7 @@ namespace CostRegisterMobile
         {
             InitializeComponent();
 
-            DependencyService.Register<IMessageBoxService, MessageBoxService>();
+            DependencyService.Register<IDialogService, DialogService>();
             DependencyService.Register<IUnitOfWork, UnitOfWork>();
             DependencyService.Register<CostPlansContext>();
             DependencyService.Register<BalanceModel>();

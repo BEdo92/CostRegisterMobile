@@ -349,6 +349,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nincs megjelenítendő adat..
+        /// </summary>
+        public static string NotificationsNoStatData {
+            get {
+                return ResourceManager.GetString("NotificationsNoStatData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Egyéb.
         /// </summary>
         public static string Others {
