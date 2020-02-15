@@ -3,6 +3,7 @@ using CostRegisterMobile.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace CostRegisterMobile.ViewModels
 {
@@ -13,12 +14,23 @@ namespace CostRegisterMobile.ViewModels
         private int _actualCost;
         private DateTime _date = DateTime.Today;
         private string _additionalInformations;
+        private bool _isPreviouslyPlannedToggled = false;
+        private List<PlanCostModel> _listOfPlans;
+        private string _selectedPlan;
+        private List<string> _listOfPlanNames;
+        private PlanCostModel _selectedPlanRecord;
 
         public IEnumerable<string> Categories
             => Repo.CategoryRepository.ReadCategory();
 
         public IEnumerable<string> Shops 
             => Repo.ShopRepository.ReadShops();
+
+        public PlanCostModel SelectedPlanRecord
+        {
+            get => _selectedPlanRecord;
+            set => SetProperty(ref _selectedPlanRecord, value);
+        }
 
         public string SelectedCategory
         {
@@ -70,6 +82,52 @@ namespace CostRegisterMobile.ViewModels
             set => SetProperty(ref _additionalInformations, value);
         }
 
+        public bool IsPreviouslyPlannedToggled
+        {
+            get => _isPreviouslyPlannedToggled;
+            set
+            {
+                SetProperty(ref _isPreviouslyPlannedToggled, value);
+
+                if (_isPreviouslyPlannedToggled)
+                {
+                    FillPreviousPlans();
+                }
+                else
+                {
+                    ResetSettingsOfPreviousPlans();
+                }
+            }
+        }
+
+
+        public List<PlanCostModel> ListOfPlans
+        { 
+            get => _listOfPlans; 
+            set => SetProperty(ref _listOfPlans, value); 
+        }
+
+        public List<string> ListOfPlanNames 
+        { 
+            get => _listOfPlanNames; 
+            set => SetProperty(ref _listOfPlanNames, value); 
+        }
+
+        public string SelectedPlan
+        {
+            get => _selectedPlan;
+            set
+            {
+                SetProperty(ref _selectedPlan, value);
+
+                if (_selectedPlan != null)
+                {
+                    SelectedPlanRecord = ListOfPlans.FirstOrDefault(pl => pl.TypeOfCostPlan.Equals(SelectedPlan));
+                    RefreshForm();
+                }
+            }
+        }
+
         protected override bool CanExecute()
         {
             var canExecute = _actualCost > 0
@@ -100,6 +158,7 @@ namespace CostRegisterMobile.ViewModels
         public override void RefreshPage()
         {
             GuiInformation = AppResources.UiInformationAboutNewShop;
+            FillPreviousPlans();
             base.RefreshPage();
         }
 
@@ -110,6 +169,20 @@ namespace CostRegisterMobile.ViewModels
             try
             {
                 Repo.CostsRepository.Create(GetCostModelObject().Map());
+
+                if (SelectedPlanRecord != null)
+                {
+                    var confirmDelete = await MessageBoxService.ShowConfirmation(
+                        $"{AppResources.DialogConfirmDeletePlan}{Environment.NewLine}{SelectedPlanRecord.TypeOfCostPlan}{Environment.NewLine}{SelectedPlanRecord.CategoryName}",
+                        AppResources.TitleWarning,
+                        AppResources.ButtonCancel);
+
+                    if (confirmDelete)
+                    {
+                        Repo.PlansRepository.Delete(SelectedPlanRecord.ID);
+                    }
+                }
+
                 await Repo.CommitAsync();
             }
             catch (Exception)
@@ -124,6 +197,8 @@ namespace CostRegisterMobile.ViewModels
 
             DeleteForm();
             UpdateBalance();
+            FillPreviousPlans();
+            SelectedPlanRecord = null;
             NotBusy();
         }
 
@@ -139,6 +214,27 @@ namespace CostRegisterMobile.ViewModels
             };
 
             return cmodel;
+        }
+
+        private void FillPreviousPlans()
+        {
+            ListOfPlans = Repo.PlansRepository.ReadAllPlanCost().ToList();
+            ListOfPlanNames = ListOfPlans.Select(names => names.TypeOfCostPlan).ToList();
+        }
+
+        private void RefreshForm()
+        {
+            SelectedCategory = SelectedPlanRecord.CategoryName;
+            AdditionalInformations = SelectedPlanRecord.PlanAdditionalInformation;
+            ActualCost = SelectedPlanRecord.CostPlanned;
+        }
+
+        private void ResetSettingsOfPreviousPlans()
+        {
+            SelectedPlanRecord = null;
+            SelectedPlan = null;
+
+            DeleteForm();
         }
     }
 }

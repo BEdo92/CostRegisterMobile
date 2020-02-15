@@ -165,6 +165,12 @@
   <data name="CostNotInShop" xml:space="preserve">
     <value>Egyéb / Nem üzlet</value>
   </data>
+  <data name="CostNotPreviouslyPlanned" xml:space="preserve">
+    <value>Tervezetlen költség</value>
+  </data>
+  <data name="CostsIsPreviouslyPlanned" xml:space="preserve">
+    <value>Tervezett költség megvalósítása</value>
+  </data>
   <data name="CostsStatistics" xml:space="preserve">
     <value>Kiadások statisztikái</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="DeleteCategory" xml:space="preserve">
     <value>Kategória törlése</value>
+  </data>
+  <data name="DialogConfirmDeletePlan" xml:space="preserve">
+    <value>Kívánja törölni az adatbázisból a költségtervet?</value>
   </data>
   <data name="Extra" xml:space="preserve">
     <value>Extra</value>
@@ -209,6 +218,9 @@
   </data>
   <data name="IncomeStatistics" xml:space="preserve">
     <value>Bevételi statisztikák</value>
+  </data>
+  <data name="ListOfPrevPlansForPicker" xml:space="preserve">
+    <value>Tervezett költségek listája</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Menü</value>

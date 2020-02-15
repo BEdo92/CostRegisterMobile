@@ -165,6 +165,12 @@
   <data name="CostNotInShop" xml:space="preserve">
     <value>Other / Not shop</value>
   </data>
+  <data name="CostNotPreviouslyPlanned" xml:space="preserve">
+    <value>New costs, not planned</value>
+  </data>
+  <data name="CostsIsPreviouslyPlanned" xml:space="preserve">
+    <value>The cost is previously planned</value>
+  </data>
   <data name="CostsStatistics" xml:space="preserve">
     <value>Statistics of costs</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="DeleteCategory" xml:space="preserve">
     <value>Delete category</value>
+  </data>
+  <data name="DialogConfirmDeletePlan" xml:space="preserve">
+    <value>Are you want to delete the plan from the database?</value>
   </data>
   <data name="Extra" xml:space="preserve">
     <value>Extra</value>
@@ -212,6 +221,9 @@
   </data>
   <data name="Information" xml:space="preserve">
     <value>Information</value>
+  </data>
+  <data name="ListOfPrevPlansForPicker" xml:space="preserve">
+    <value>List of previous plans</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>

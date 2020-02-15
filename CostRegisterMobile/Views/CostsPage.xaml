@@ -12,56 +12,82 @@
     <ContentPage.Content>
         <Grid>
 
-            <ScrollView>
-                <StackLayout>
+            <StackLayout>
 
-                    <Label x:Name="dateOfShopping" Text="{x:Static resources:AppResources.DateOfCost}" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
 
-                    <DatePicker x:Name="DatePick" Date="{Binding Date}" />
+                    <Switch
+                        x:Name="switchIsPreviouslyPlanned"
+                        Grid.Column="0"
+                        IsToggled="{Binding IsPreviouslyPlannedToggled}" />
+
+                    <Label
+                        x:Name="labelIsPreviouslyPlanned"
+                        Grid.Column="1"
+                        Text="{x:Static resources:AppResources.CostsIsPreviouslyPlanned}" />
+
+                </Grid>
+
+
+                <Grid IsVisible="{Binding IsPreviouslyPlannedToggled}" Opacity="1.0">
 
                     <Picker
-                        x:Name="costCategoryPick"
-                        Title="{x:Static resources:AppResources.Category}"
-                        ItemsSource="{Binding Categories}"
-                        SelectedItem="{Binding SelectedCategory}" />
+                        x:Name="pickerPlanNameList"
+                        Title="{x:Static resources:AppResources.ListOfPrevPlansForPicker}"
+                        ItemsSource="{Binding ListOfPlanNames}"
+                        SelectedItem="{Binding SelectedPlan}" />
 
-                    <Picker
-                        x:Name="shopPick"
-                        Title="{x:Static resources:AppResources.Shop}"
-                        ItemsSource="{Binding Shops}"
-                        SelectedItem="{Binding SelectedShop}" />
+                </Grid>
 
-                    <Label x:Name="cost" Text="{x:Static resources:AppResources.AmountOfMoney}" />
+                <Label x:Name="dateOfShopping" Text="{x:Static resources:AppResources.DateOfCost}" />
 
-                    <Entry
-                        x:Name="costInput"
-                        Keyboard="Numeric"
-                        Text="{Binding ActualCost}" />
+                <DatePicker x:Name="DatePick" Date="{Binding Date}" />
 
-                    <Label x:Name="additionalInfo" Text="{x:Static resources:AppResources.AdditionalInformations}" />
+                <Picker
+                    x:Name="costCategoryPick"
+                    Title="{x:Static resources:AppResources.Category}"
+                    ItemsSource="{Binding Categories}"
+                    SelectedItem="{Binding SelectedCategory}" />
 
-                    <Entry
-                        x:Name="additionalInfoInput"
-                        MaxLength="100"
-                        Text="{Binding AdditionalInformations}" />
+                <Picker
+                    x:Name="shopPick"
+                    Title="{x:Static resources:AppResources.Shop}"
+                    ItemsSource="{Binding Shops}"
+                    SelectedItem="{Binding SelectedShop}" />
 
-                    <Button
-                        x:Name="saveCost"
-                        Command="{Binding SaveCommand}"
-                        Text="{x:Static resources:AppResources.ButtonSave}" />
+                <Label x:Name="cost" Text="{x:Static resources:AppResources.AmountOfMoney}" />
 
-                    <Button
-                        x:Name="deleteForm"
-                        Command="{Binding DeleteCommand}"
-                        Text="{x:Static resources:AppResources.ButtonDeleteForm}" />
+                <Entry
+                    x:Name="costInput"
+                    Keyboard="Numeric"
+                    Text="{Binding ActualCost}" />
 
-                    <Label x:Name="balanceLabel" Text="{Binding Balance}" />
+                <Label x:Name="additionalInfo" Text="{x:Static resources:AppResources.AdditionalInformations}" />
 
-                    <Label x:Name="information" Text="{Binding GuiInformation}" />
+                <Entry
+                    x:Name="additionalInfoInput"
+                    MaxLength="100"
+                    Text="{Binding AdditionalInformations}" />
 
-                </StackLayout>
+                <Button
+                    x:Name="saveCost"
+                    Command="{Binding SaveCommand}"
+                    Text="{x:Static resources:AppResources.ButtonSave}" />
 
-            </ScrollView>
+                <Button
+                    x:Name="deleteForm"
+                    Command="{Binding DeleteCommand}"
+                    Text="{x:Static resources:AppResources.ButtonDeleteForm}" />
+
+                <Label x:Name="balanceLabel" Text="{Binding Balance}" />
+
+                <Label x:Name="information" Text="{Binding GuiInformation}" />
+
+            </StackLayout>
 
             <Grid
                 BackgroundColor="Black"

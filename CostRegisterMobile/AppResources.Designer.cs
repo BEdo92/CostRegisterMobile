@@ -205,6 +205,24 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tervezetlen költség.
+        /// </summary>
+        public static string CostNotPreviouslyPlanned {
+            get {
+                return ResourceManager.GetString("CostNotPreviouslyPlanned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tervezett költség megvalósítása.
+        /// </summary>
+        public static string CostsIsPreviouslyPlanned {
+            get {
+                return ResourceManager.GetString("CostsIsPreviouslyPlanned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kiadások statisztikái.
         /// </summary>
         public static string CostsStatistics {
@@ -246,6 +264,15 @@ namespace CostRegisterMobile {
         public static string DeleteCategory {
             get {
                 return ResourceManager.GetString("DeleteCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kívánja törölni az adatbázisból a költségtervet?.
+        /// </summary>
+        public static string DialogConfirmDeletePlan {
+            get {
+                return ResourceManager.GetString("DialogConfirmDeletePlan", resourceCulture);
             }
         }
         
@@ -336,6 +363,15 @@ namespace CostRegisterMobile {
         public static string IncomeStatistics {
             get {
                 return ResourceManager.GetString("IncomeStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tervezett költségek listája.
+        /// </summary>
+        public static string ListOfPrevPlansForPicker {
+            get {
+                return ResourceManager.GetString("ListOfPrevPlansForPicker", resourceCulture);
             }
         }
         
