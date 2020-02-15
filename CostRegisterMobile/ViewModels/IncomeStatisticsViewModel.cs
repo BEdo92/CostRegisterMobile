@@ -19,11 +19,20 @@ namespace CostRegisterMobile.ViewModels
             }
         }
 
-        public override void RefreshPage()
+        protected override void RefreshList()
         {
             IncomeStatisticsList = Repo.IncomeRepository
-                        .GetAll()
-                        .OrderByDescending(d => d.DateOFIncome);
+                          .GetAll()
+                          .Where(c =>
+                          {
+                              if (!string.IsNullOrWhiteSpace(TextToFilterBy))
+                              {
+                                  return c.TypeOfIncome.Contains(TextToFilterBy);
+                              }
+
+                              return true;
+                          })
+                          .OrderByDescending(d => d.DateOFIncome);
 
             Notifications = IncomeStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
         }

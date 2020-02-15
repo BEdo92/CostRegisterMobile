@@ -13,16 +13,38 @@
         <Grid>
             <StackLayout>
 
+                <Label
+                    x:Name="labelIsPreviouslyPlanned"
+                    Grid.Column="1"
+                    Text="{x:Static resources:AppResources.SwitchTurnOnFiltering}" />
+
+                <Switch
+                    x:Name="switchIsPreviouslyPlanned"
+                    Grid.Column="0"
+                    IsToggled="{Binding IsFilteingOn}" />
+
                 <Picker
                     x:Name="costCategoryPick"
                     Title="{x:Static resources:AppResources.Category}"
+                    IsVisible="{Binding IsFilteingOn}"
                     ItemsSource="{Binding Categories}"
                     SelectedItem="{Binding SelectedListItem}" />
+
+                <Label
+                    x:Name="labelFilterTitleByText"
+                    IsVisible="{Binding IsFilteingOn}"
+                    Text="{x:Static resources:AppResources.LabelFilterInTitle}" />
+
+                <Entry
+                    x:Name="entryFilterTitleByText"
+                    IsVisible="{Binding IsFilteingOn}"
+                    Text="{Binding TextToFilterBy}" />
 
                 <Button
                     x:Name="buttonShowSpecificIncomePerCategory"
                     Command="{Binding ShowSpecificCommand}"
-                    Text="{x:Static resources:AppResources.ButtonShowPlansForCategory}" />
+                    IsVisible="{Binding IsFilteingOn}"
+                    Text="{x:Static resources:AppResources.ButtonStartFiltering}" />
 
                 <Button
                     x:Name="buttonShowAllIncome"

@@ -150,11 +150,17 @@
   <data name="ButtonSave" xml:space="preserve">
     <value>Mentés</value>
   </data>
+  <data name="ButtonShowAll" xml:space="preserve">
+    <value>Összeset mutassa!</value>
+  </data>
   <data name="ButtonShowPlans" xml:space="preserve">
     <value>Tervek mutatása</value>
   </data>
   <data name="ButtonShowPlansForCategory" xml:space="preserve">
     <value>Kiválasztott kategória terveinek mutatása</value>
+  </data>
+  <data name="ButtonStartFiltering" xml:space="preserve">
+    <value>Szűrés indítása!</value>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Kategória</value>
@@ -218,6 +224,9 @@
   </data>
   <data name="IncomeStatistics" xml:space="preserve">
     <value>Bevételi statisztikák</value>
+  </data>
+  <data name="LabelFilterInTitle" xml:space="preserve">
+    <value>Szűrés a címben</value>
   </data>
   <data name="ListOfPrevPlansForPicker" xml:space="preserve">
     <value>Tervezett költségek listája</value>
@@ -293,6 +302,9 @@
   </data>
   <data name="Sports" xml:space="preserve">
     <value>Sport</value>
+  </data>
+  <data name="SwitchTurnOnFiltering" xml:space="preserve">
+    <value>Szűrések bekapcsolása</value>
   </data>
   <data name="TextCategoryAlreadyExists" xml:space="preserve">
     <value>A megadott kategória már létezett!</value>

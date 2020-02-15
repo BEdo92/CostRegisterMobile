@@ -24,22 +24,28 @@ namespace CostRegisterMobile.ViewModels
 
         protected override void RefreshList()
         {            
-            if (SelectedListItem != null)
-            {
                 PlanStatisticsList = Repo.PlansRepository
                            .ReadAllPlanCost()
-                           .Where(c => c.CategoryName == SelectedListItem)
+                           .Where(c => 
+                           {
+                               if (!string.IsNullOrWhiteSpace(SelectedListItem) && !string.IsNullOrWhiteSpace(TextToFilterBy))
+                               {
+                                   return c.CategoryName.Equals(SelectedListItem) && c.TypeOfCostPlan.Contains(TextToFilterBy);
+                               }
+                               else if (!string.IsNullOrWhiteSpace(SelectedListItem))
+                               {
+                                   return c.CategoryName.Equals(SelectedListItem);
+                               }
+                               else if (!string.IsNullOrWhiteSpace(TextToFilterBy))
+                               {
+                                   return c.TypeOfCostPlan.Contains(TextToFilterBy);
+                               }
+
+                               return true;
+                           })
                            .OrderByDescending(d => d.DateOfPlan);
-            }
-            else
-            {
-                PlanStatisticsList = Repo.PlansRepository
-                             .ReadAllPlanCost()
-                             .OrderByDescending(d => d.DateOfPlan);
-            }
 
-            Notifications = PlanStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
-
+            Notifications = PlanStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;           
         }
 
         protected override async Task ExecuteDeleteAsync()

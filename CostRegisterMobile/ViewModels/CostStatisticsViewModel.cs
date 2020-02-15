@@ -25,19 +25,18 @@ namespace CostRegisterMobile.ViewModels
 
         protected override void RefreshList()
         {
-            if (SelectedListItem != null)
-            {
-                CostStatisticsList = Repo.CostsRepository
-                                .ReadCostsToStatModel()
-                                .Where(c => c.Category == SelectedListItem)
-                                .OrderByDescending(d => d.DateTime);
-            }
-            else
-            {
-                CostStatisticsList = Repo.CostsRepository
-                                .ReadCostsToStatModel()
-                                .OrderByDescending(d => d.DateTime);
-            }
+            CostStatisticsList = Repo.CostsRepository
+                        .ReadCostsToStatModel()
+                        .Where(c =>
+                        {
+                            if (!string.IsNullOrWhiteSpace(SelectedListItem))
+                            {
+                                return c.Category.Equals(SelectedListItem);
+                            }
+
+                            return true;
+                        })
+                        .OrderByDescending(d => d.DateTime);
 
             Notifications = CostStatisticsList.Any() ? string.Empty : AppResources.NotificationsNoStatData;
         }

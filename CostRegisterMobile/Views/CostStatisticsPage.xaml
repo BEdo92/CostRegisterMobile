@@ -12,18 +12,29 @@
 
     <ContentPage.Content>
         <Grid>
+            <StackLayout>
 
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label
+                    x:Name="labelIsPreviouslyPlanned"
+                    Grid.Column="1"
+                    Text="{x:Static resources:AppResources.SwitchTurnOnFiltering}" />
+
+                <Switch
+                    x:Name="switchIsPreviouslyPlanned"
+                    Grid.Column="0"
+                    IsToggled="{Binding IsFilteingOn}" />
 
                 <Picker
                     x:Name="costCategoryPick"
                     Title="{x:Static resources:AppResources.Category}"
+                    IsVisible="{Binding IsFilteingOn}"
                     ItemsSource="{Binding Categories}"
                     SelectedItem="{Binding SelectedListItem}" />
 
                 <Button
                     x:Name="buttonShowSpecificCostPerCategory"
                     Command="{Binding ShowSpecificCommand}"
+                    IsVisible="{Binding IsFilteingOn}"
                     Text="{x:Static resources:AppResources.ShowSpecificCostsForCategory}" />
 
                 <Button
@@ -103,20 +114,21 @@
                     Text="{x:Static resources:AppResources.ButtonDeleteSelectedItem}" />
 
 
+                <Grid
+                    BackgroundColor="Black"
+                    IsVisible="{Binding IsBusy}"
+                    Opacity="0.7">
+                    <ActivityIndicator
+                        HorizontalOptions="Center"
+                        IsEnabled="{Binding IsBusy}"
+                        IsRunning="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        VerticalOptions="Center"
+                        Color="Pink" />
+                </Grid>
+
             </StackLayout>
 
-            <Grid
-                BackgroundColor="Black"
-                IsVisible="{Binding IsBusy}"
-                Opacity="0.7">
-                <ActivityIndicator
-                    HorizontalOptions="Center"
-                    IsEnabled="{Binding IsBusy}"
-                    IsRunning="{Binding IsBusy}"
-                    IsVisible="{Binding IsBusy}"
-                    VerticalOptions="Center"
-                    Color="Pink" />
-            </Grid>
 
         </Grid>
     </ContentPage.Content>

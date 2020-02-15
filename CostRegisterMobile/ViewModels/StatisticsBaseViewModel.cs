@@ -13,6 +13,8 @@ namespace CostRegisterMobile.ViewModels
         private T _selectedRecord;
         private string _selectedListItem;
         private string _notifications = null;
+        private string _textToFilterBy;
+        private bool _isFilteingOn;
 
         public new ICommand DeleteCommand =>
             _deleteCommand ??= new Command(async () => await ExecuteDeleteAsync(), CanDeleteBeEnabled);
@@ -38,10 +40,23 @@ namespace CostRegisterMobile.ViewModels
             get => _selectedListItem; 
             set => SetProperty(ref _selectedListItem, value); 
         }
+
         public string Notifications 
         { 
-            get => _notifications; 
-            set => SetProperty(ref _notifications, value); 
+            get => _notifications;
+            set => SetProperty(ref _notifications, value);
+        }
+
+        public bool IsFilteingOn
+        { 
+            get => _isFilteingOn; 
+            set => SetProperty(ref _isFilteingOn, value); 
+        }
+
+        public string TextToFilterBy 
+        { 
+            get => _textToFilterBy; 
+            set => SetProperty(ref _textToFilterBy, value); 
         }
 
         protected bool CanDeleteBeEnabled()
@@ -79,6 +94,7 @@ namespace CostRegisterMobile.ViewModels
         protected virtual void ShowCosts()
         {
             SelectedListItem = null;
+            TextToFilterBy = string.Empty;
             RefreshList();
         }
     }

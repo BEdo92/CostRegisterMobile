@@ -150,11 +150,17 @@
   <data name="ButtonSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="ButtonShowAll" xml:space="preserve">
+    <value>Show all</value>
+  </data>
   <data name="ButtonShowPlans" xml:space="preserve">
     <value>Show plans</value>
   </data>
   <data name="ButtonShowPlansForCategory" xml:space="preserve">
     <value>Show plans of selected category</value>
+  </data>
+  <data name="ButtonStartFiltering" xml:space="preserve">
+    <value>Filter!</value>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
@@ -221,6 +227,9 @@
   </data>
   <data name="Information" xml:space="preserve">
     <value>Information</value>
+  </data>
+  <data name="LabelFilterInTitle" xml:space="preserve">
+    <value>Search in title by text</value>
   </data>
   <data name="ListOfPrevPlansForPicker" xml:space="preserve">
     <value>List of previous plans</value>
@@ -296,6 +305,9 @@
   </data>
   <data name="Sports" xml:space="preserve">
     <value>Sports</value>
+  </data>
+  <data name="SwitchTurnOnFiltering" xml:space="preserve">
+    <value>Filter data</value>
   </data>
   <data name="TextCategoryAlreadyExists" xml:space="preserve">
     <value>The category is already exists!</value>

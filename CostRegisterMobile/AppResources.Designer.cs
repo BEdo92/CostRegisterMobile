@@ -160,6 +160,15 @@ namespace CostRegisterMobile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Összeset mutassa!.
+        /// </summary>
+        public static string ButtonShowAll {
+            get {
+                return ResourceManager.GetString("ButtonShowAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tervek mutatása.
         /// </summary>
         public static string ButtonShowPlans {
@@ -174,6 +183,15 @@ namespace CostRegisterMobile {
         public static string ButtonShowPlansForCategory {
             get {
                 return ResourceManager.GetString("ButtonShowPlansForCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Szűrés indítása!.
+        /// </summary>
+        public static string ButtonStartFiltering {
+            get {
+                return ResourceManager.GetString("ButtonStartFiltering", resourceCulture);
             }
         }
         
@@ -363,6 +381,15 @@ namespace CostRegisterMobile {
         public static string IncomeStatistics {
             get {
                 return ResourceManager.GetString("IncomeStatistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Szűrés a címben.
+        /// </summary>
+        public static string LabelFilterInTitle {
+            get {
+                return ResourceManager.GetString("LabelFilterInTitle", resourceCulture);
             }
         }
         
@@ -588,6 +615,15 @@ namespace CostRegisterMobile {
         public static string Sports {
             get {
                 return ResourceManager.GetString("Sports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Szűrések bekapcsolása.
+        /// </summary>
+        public static string SwitchTurnOnFiltering {
+            get {
+                return ResourceManager.GetString("SwitchTurnOnFiltering", resourceCulture);
             }
         }
         
