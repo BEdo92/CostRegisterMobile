@@ -46,7 +46,7 @@ namespace CostRegisterMobile.ViewModels
         {
             Busy();
 
-            if (await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteData, AppResources.TitleWarning, AppResources.ButtonCancel)
+            if (await DialogService.ShowConfirmation(AppResources.TextConfirmDeleteData, AppResources.TitleWarning, AppResources.ButtonCancel)
                 && SelectedRecord != null)
             {
                 Repo.PlansRepository.Delete(SelectedRecord.ID);

@@ -26,7 +26,7 @@ namespace CostRegisterMobile.ViewModels
         public ICommand SaveCommand =>
             _saveCommand ??= new Command(async () => await ExecuteSaveAsync(), CanExecute);
 
-        public IDialogService MessageBoxService =>
+        public IDialogService DialogService =>
             DependencyService.Get<IDialogService>();
 
         public BalanceModel BalanceModel =>

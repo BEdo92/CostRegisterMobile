@@ -139,7 +139,7 @@ namespace CostRegisterMobile.ViewModels
 
         protected override async Task ExecuteDeleteAsync()
         {
-            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete, AppResources.TitleWarning, AppResources.ButtonCancel);
+            bool whetherDelete = await DialogService.ShowConfirmation(AppResources.TextConfirmFormDelete, AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherDelete)
             {
@@ -172,7 +172,7 @@ namespace CostRegisterMobile.ViewModels
 
                 if (SelectedPlanRecord != null)
                 {
-                    var confirmDelete = await MessageBoxService.ShowConfirmation(
+                    var confirmDelete = await DialogService.ShowConfirmation(
                         $"{AppResources.DialogConfirmDeletePlan}{Environment.NewLine}{SelectedPlanRecord.TypeOfCostPlan}{Environment.NewLine}{SelectedPlanRecord.CategoryName}",
                         AppResources.TitleWarning,
                         AppResources.ButtonCancel);
@@ -187,13 +187,13 @@ namespace CostRegisterMobile.ViewModels
             }
             catch (Exception)
             {
-                await MessageBoxService.ShowMessage(AppResources.TextError, AppResources.TitleError);
+                await DialogService.ShowMessage(AppResources.TextError, AppResources.TitleError);
 
                 NotBusy();
                 return;
             }
 
-            await MessageBoxService.ShowMessage(AppResources.TextSaveSuccess, AppResources.TitleSuccess);
+            await DialogService.ShowMessage(AppResources.TextSaveSuccess, AppResources.TitleSuccess);
 
             DeleteForm();
             UpdateBalance();

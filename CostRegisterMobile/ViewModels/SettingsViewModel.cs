@@ -59,7 +59,7 @@ namespace CostRegisterMobile.ViewModels
         {
             Busy();
 
-            var whetherSave = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmChangeSettings, AppResources.TitleWarning, AppResources.ButtonCancel);
+            var whetherSave = await DialogService.ShowConfirmation(AppResources.TextConfirmChangeSettings, AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherSave)
             {
@@ -81,7 +81,7 @@ namespace CostRegisterMobile.ViewModels
 
                 if (!isAnythingSaved)
                 {
-                    await MessageBoxService.ShowMessage(AppResources.TextSettingsAlreadyMatch, AppResources.TitleMessage);
+                    await DialogService.ShowMessage(AppResources.TextSettingsAlreadyMatch, AppResources.TitleMessage);
                     return;
                 }
 
@@ -89,11 +89,11 @@ namespace CostRegisterMobile.ViewModels
             }
             catch (Exception)
             {
-                await MessageBoxService.ShowMessage(AppResources.TextError, AppResources.TitleError);
+                await DialogService.ShowMessage(AppResources.TextError, AppResources.TitleError);
                 return;
             }
 
-            await MessageBoxService.ShowMessage(AppResources.TextSaveSuccess, AppResources.TitleSuccess);
+            await DialogService.ShowMessage(AppResources.TextSaveSuccess, AppResources.TitleSuccess);
 
             Categories = Repo.CategoryRepository.ReadCategory();
             UpdateBalance();
@@ -116,7 +116,7 @@ namespace CostRegisterMobile.ViewModels
             }
             else
             {
-                await MessageBoxService.ShowMessage(AppResources.TextShopAlreadyExists, AppResources.TitleWarning);
+                await DialogService.ShowMessage(AppResources.TextShopAlreadyExists, AppResources.TitleWarning);
                 return false;
             }
             return true;
@@ -138,7 +138,7 @@ namespace CostRegisterMobile.ViewModels
             }
             else
             {
-                await MessageBoxService.ShowMessage(AppResources.TextCategoryAlreadyExists, AppResources.TitleWarning);
+                await DialogService.ShowMessage(AppResources.TextCategoryAlreadyExists, AppResources.TitleWarning);
                 return false;
             }
             return true;
@@ -183,7 +183,7 @@ namespace CostRegisterMobile.ViewModels
 
         protected override async Task ExecuteDeleteAsync()
         {
-            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmFormDelete,AppResources.TitleWarning, AppResources.ButtonCancel);
+            bool whetherDelete = await DialogService.ShowConfirmation(AppResources.TextConfirmFormDelete,AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherDelete)
             {
@@ -195,7 +195,7 @@ namespace CostRegisterMobile.ViewModels
 
         private async Task DeleteUserDatasFromDatabase()
         {
-            bool whetherDelete = await MessageBoxService.ShowConfirmation(AppResources.TextConfirmDeleteDatabase, AppResources.TitleWarning, AppResources.ButtonCancel);
+            bool whetherDelete = await DialogService.ShowConfirmation(AppResources.TextConfirmDeleteDatabase, AppResources.TitleWarning, AppResources.ButtonCancel);
 
             if (whetherDelete)
             {
