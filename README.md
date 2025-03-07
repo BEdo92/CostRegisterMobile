@@ -11,3 +11,5 @@ The main functions of this cost register app:
 - Filtering costs and plans by category.
 
 The datas are saved locally to a SQLite database file.
+
+This was my thesis for the Software developer vocational training in 2020. After graduating, I continued working on it a little bit.
